@@ -5,7 +5,7 @@ services:
     - docker
     
 before_install:
-    - docker build -t vinodres/windocker-react Dockerfile.dev .
+    - docker build -t vinodres/windocker-react -f Dockerfile.dev .
 
 script:
     - docker run -e CI=true vinodres/windocker-react npm run test
